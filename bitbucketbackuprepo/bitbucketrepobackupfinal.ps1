@@ -1,5 +1,5 @@
-﻿$Auth64Encoded = "ATCTT3xFfGN0wSFF7JY5fZ1eDbtWdDhEogIxE-8XH0GtoWTV96xmTlU-PAtsTQL4-AYwvkaXRtb8S2KRfMkEgvIdpEDtWaya8tzNY3MnmYedD8MNySL2rRm0IgRjYJaepK9Ih3CLFPE9FlkjRXz6gj7018q-LM7RZbdmgJ9SYoVdM-Iph3Un-88=CC6E6D99"
-$teamname="goeasyteam"
+$Auth64Encoded = "AccessToken"
+$teamname="YOURTEAM NAME"
 $Url = "https://api.bitbucket.org/2.0/repositories/$teamname"
 $webData = ConvertFrom-JSON (Invoke-WebRequest  -Uri $Url -Method Get -Headers @{'Authorization'= "Bearer $Auth64Encoded"} )
 $res=$webData.values
