@@ -1,4 +1,4 @@
-﻿$Auth64Encoded = "AccessToken"
+$Auth64Encoded = "AccessToken"
 $teamname="YOURTEAM NAME"
 $Url = "https://api.bitbucket.org/2.0/repositories/$teamname"
 $webData = ConvertFrom-JSON (Invoke-WebRequest  -Uri $Url -Method Get -Headers @{'Authorization'= "Bearer $Auth64Encoded"} )
