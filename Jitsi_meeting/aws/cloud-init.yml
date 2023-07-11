@@ -1,0 +1,4 @@
+#cloud-config
+groups:
+ - Ubuntu: [root, sys]
+ - cloud-users
