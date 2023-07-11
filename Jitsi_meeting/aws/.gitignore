@@ -1,8 +1,0 @@
-terraform.tfstate
-terraform.tfstate.backup
-.terraform
-*.swp
-*.swo
-terraform.tfvars
-*.auto.tfvars
-.DS_Store
