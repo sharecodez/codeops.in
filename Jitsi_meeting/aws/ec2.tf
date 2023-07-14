@@ -39,6 +39,6 @@ resource "tls_private_key" "rsa" {
 
 
 resource "local_file" "om_meet" {
-  content  = tls_private_key.rsa.private_key_pem
+  content  = 
   filename = "om_meet"
 }
