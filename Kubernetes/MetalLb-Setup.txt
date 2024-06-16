@@ -1,0 +1,24 @@
+Url: https://metallb.universe.tf/installation/
+
+sudo kubectl create deployment nginx --image=nginx
+sudo kubectl expose deployment nginx --type=LoadBalancer --name=nginx --port=80 --protocol=TCP
+sudo kubectl get services --all-namespaces
+
+
+---Apply in the MetalLb namespace
+
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: k3s-lb-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.29.51-192.168.29.100
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: k3s-lb-pool
+  namespace: metallb-system
+
